@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		2521B48E1E712E3D00D73735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2521B48C1E712E3D00D73735 /* LaunchScreen.storyboard */; };
 		2521B4991E712E3D00D73735 /* Cycle_timerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2521B4981E712E3D00D73735 /* Cycle_timerTests.m */; };
 		2521B4A41E712E3D00D73735 /* Cycle_timerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2521B4A31E712E3D00D73735 /* Cycle_timerUITests.m */; };
+		2521B4B41E7131D600D73735 /* ScondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2521B4B21E7131D600D73735 /* ScondViewController.m */; };
+		2521B4B51E7131D600D73735 /* ScondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2521B4B31E7131D600D73735 /* ScondViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		2521B49F1E712E3D00D73735 /* Cycle_timerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Cycle_timerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2521B4A31E712E3D00D73735 /* Cycle_timerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cycle_timerUITests.m; sourceTree = "<group>"; };
 		2521B4A51E712E3D00D73735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2521B4B11E7131D600D73735 /* ScondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScondViewController.h; sourceTree = "<group>"; };
+		2521B4B21E7131D600D73735 /* ScondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScondViewController.m; sourceTree = "<group>"; };
+		2521B4B31E7131D600D73735 /* ScondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,9 @@
 				2521B4821E712E3D00D73735 /* AppDelegate.m */,
 				2521B4841E712E3D00D73735 /* ViewController.h */,
 				2521B4851E712E3D00D73735 /* ViewController.m */,
+				2521B4B11E7131D600D73735 /* ScondViewController.h */,
+				2521B4B21E7131D600D73735 /* ScondViewController.m */,
+				2521B4B31E7131D600D73735 /* ScondViewController.xib */,
 				2521B4871E712E3D00D73735 /* Main.storyboard */,
 				2521B48A1E712E3D00D73735 /* Assets.xcassets */,
 				2521B48C1E712E3D00D73735 /* LaunchScreen.storyboard */,
@@ -225,7 +233,7 @@
 				};
 			};
 			buildConfigurationList = 2521B4761E712E3D00D73735 /* Build configuration list for PBXProject "Cycle_timer" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -251,6 +259,7 @@
 			files = (
 				2521B48E1E712E3D00D73735 /* LaunchScreen.storyboard in Resources */,
 				2521B48B1E712E3D00D73735 /* Assets.xcassets in Resources */,
+				2521B4B51E7131D600D73735 /* ScondViewController.xib in Resources */,
 				2521B4891E712E3D00D73735 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +287,7 @@
 			files = (
 				2521B4861E712E3D00D73735 /* ViewController.m in Sources */,
 				2521B4831E712E3D00D73735 /* AppDelegate.m in Sources */,
+				2521B4B41E7131D600D73735 /* ScondViewController.m in Sources */,
 				2521B4801E712E3D00D73735 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +526,7 @@
 				2521B4AA1E712E3D00D73735 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2521B4AB1E712E3D00D73735 /* Build configuration list for PBXNativeTarget "Cycle_timerTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +535,7 @@
 				2521B4AD1E712E3D00D73735 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2521B4AE1E712E3D00D73735 /* Build configuration list for PBXNativeTarget "Cycle_timerUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +544,7 @@
 				2521B4B01E712E3D00D73735 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
