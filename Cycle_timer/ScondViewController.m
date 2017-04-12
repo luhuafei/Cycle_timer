@@ -34,20 +34,44 @@
        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     
 //   第三种 gcd计时器
+    //创建全局队列 优先级
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
     
-//    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-//    
-//    _sourceTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-//    
-//    dispatch_source_set_timer(_sourceTimer, DISPATCH_TIME_NOW, 1.0 * NSEC_PER_SEC, 0);
-//    
-//    dispatch_source_set_event_handler(_sourceTimer, ^{
-//        
-//        NSLog(@"开始计时啦");
-//       
-//    });
-//
-//    dispatch_resume(_sourceTimer);
+    //定时器 事件源
+    _sourceTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    
+    /**
+       1,事件源
+       2,什么时候开始
+       3,多久执行一次(单位纳秒 (NSEC_PER_SEC))
+       4,偏差(精确度)
+     */
+    dispatch_source_set_timer(_sourceTimer, DISPATCH_TIME_NOW, 1.0 * NSEC_PER_SEC, 0.0 * NSEC_PER_SEC);
+    //响应原事件
+    dispatch_source_set_event_handler(_sourceTimer, ^{
+        
+        NSLog(@"开始计时啦");
+        
+        if(YES){
+            dispatch_source_cancel(_sourceTimer);
+            //iOS 6之后 gcd 不用再手动释放
+            //OS_OBJECT_USE_OBJC 是iOS 6之后才有的, 如果是6之前 释放
+#if !OS_OBJECT_USE_OBJC
+            dispatch_release(_sourceTimer);
+#endif
+        }else
+        {
+            
+            
+        }
+       
+    });
+    dispatch_source_set_cancel_handler(_sourceTimer, ^{
+        
+    });
+    
+     //启动
+    dispatch_resume(_sourceTimer);
 }
 
 
